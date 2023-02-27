@@ -16,5 +16,11 @@ pipeline {
       }
     }
 
+    stage('Build') {
+      steps {
+        sh 'npm install && npm run build'
+      }
+    }
+
   }
 }
