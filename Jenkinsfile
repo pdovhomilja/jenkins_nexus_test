@@ -21,12 +21,10 @@ pipeline {
         sh 'ls -la'
       }
     }
-    
-
 
     stage('build Docker') {
       steps {
-        sh 'docker build -f Dockerfile .'
+        sh 'docker build -t nexus.faircredit.cz:8082/jenkins-nexus-test:latest'
       }
     }
 
