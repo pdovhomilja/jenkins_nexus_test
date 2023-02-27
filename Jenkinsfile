@@ -10,15 +10,9 @@ pipeline {
     stage('NodeJS') {
       steps {
         nodejs('NodeJS-18') {
-          sh 'node -v'
+          sh 'npm install && npm run build'
         }
 
-      }
-    }
-
-    stage('Build') {
-      steps {
-        sh 'npm install && npm run build'
       }
     }
 
