@@ -9,7 +9,7 @@ pipeline {
 
     stage('Test NodeJS') {
       steps {
-        sh 'sh node --version'
+        sh 'node --version'
       }
     }
 
