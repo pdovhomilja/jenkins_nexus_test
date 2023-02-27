@@ -7,9 +7,12 @@ pipeline {
       }
     }
 
-    stage('Test NodeJS') {
+    stage('NodeJS') {
       steps {
-        sh 'node --version'
+        nodejs('18.2') {
+          sh 'node -v'
+        }
+
       }
     }
 
