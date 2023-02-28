@@ -24,13 +24,13 @@ pipeline {
 
     stage('build Docker') {
       environment {
-        NEXUS_USER = 'devops'
-        NEXUS_PASS = 'faircredit'
+        NEXUS_USER = 'admin'
+        NEXUS_PASS = 'FairCredit2022'
       }
       steps {
-        sh 'docker build -t nexus.faircredit.cz:8082/jenkins-nexus-test:latest .'
-        sh 'docker login nexus.faircredit.cz:8082 -u $NEXUS_USER -p $NEXUS_PASS'
-        sh 'docker push nexus.faircredit.cz:8082/jenkins-nexus-test:latest'
+        sh 'docker build -t nexus.faircredit.cz:8083/jenkins-nexus-test:latest .'
+        sh 'docker login nexus.faircredit.cz:8083 -u $NEXUS_USER -p $NEXUS_PASS'
+        sh 'docker push nexus.faircredit.cz:8083/jenkins-nexus-test:latest'
       }
     }
 
