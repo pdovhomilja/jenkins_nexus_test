@@ -25,7 +25,6 @@ pipeline {
     stage('build Docker') {
       steps {
         sh 'docker build -t nexus.faircredit.cz:8082/jenkins-nexus-test:latest .'
-        sh 'docker login nexus.faircredit.cz:8082'
         sh 'docker push nexus.faircredit.cz:8082/jenkins-nexus-test:latest'
       }
     }
