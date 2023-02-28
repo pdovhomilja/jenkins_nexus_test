@@ -46,7 +46,7 @@ export default function Home() {
       </div>
       <div>
         <h1>Test FairCredit!</h1>
-        <p>Test 2</p>
+        <p>Test 3</p>
       </div>
       <div className={styles.grid}>
         <a
