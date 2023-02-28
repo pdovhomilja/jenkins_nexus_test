@@ -25,7 +25,7 @@ pipeline {
     stage('build Docker') {
       environment {
         NEXUS_USER = 'admin'
-        NEXUS_PASS = 'FairCredit2022'
+        NEXUS_PASS = 'FairNexus2022'
       }
       steps {
         sh 'docker build -t nexus.faircredit.cz:8083/jenkins-nexus-test:latest .'
